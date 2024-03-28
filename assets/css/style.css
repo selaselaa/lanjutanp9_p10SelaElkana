@@ -1,0 +1,438 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid black; */
+}
+h1 {
+    text-align: center;
+    margin: 115px 0px 30px;
+}
+h1:hover {
+    letter-spacing: 25px;
+}
+p {
+    text-align: justify;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 1000;  */
+    background-color: transparent;
+    transition: background-color 0.2s ease; 
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+nav img {
+    height: 50px;
+    border-radius: 50%;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+}
+nav ul li a {
+    color: #151515;
+    text-decoration: none;
+    padding: 15px 15px;
+}
+nav ul li a:hover {
+    font-family: "Madimi One", sans-serif;
+    border: 2px solid #F9E897;
+    background-color: #F9E897;
+    color: #151515;
+}
+
+/* Index */
+.container {
+    background-color: #FFC374;
+    min-height: 100vh;
+}
+.carousel {
+    min-height: 85vh;
+    position: relative;
+}
+.carousel input {
+    display: none;
+}
+.carousel-btn {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    color: rgba(255, 255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, .1);
+}
+.carousel-btn:hover,
+.carousel-btn:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+.carousel-btn:focus {
+    outline:  1px solid black;
+}
+.carousel-btn.prev {
+    left: 1rem;
+}
+.carousel-btn.next {
+    right: 1rem;
+}
+.slide {
+    background-color: #F9E897;
+    border-radius: 15px;
+    height: 75vh;
+    width: 85%;
+    margin: 35px auto;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.slide[data-active] {
+    opacity: 1;
+}
+.slide img {
+    min-height: 100px;
+    width: 550px;
+    border-radius: 15px;
+}
+.slide p, .slide h4 {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    text-align: center;
+}
+.slide h4 {
+    font-size: xx-large;
+}
+.slide a {
+    margin: 0px auto;
+    z-index: 3;
+    text-decoration: none;
+    color: #151515;
+    border: 1px solid #151515;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+.slide a:hover {
+    font-family: "Madimi One", sans-serif;
+    border: 2px solid #FFC374;
+    background-color: #FFC374;
+}
+
+/* index - navigation */
+.navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: 475px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.manual-btn {
+    border: 2px solid #7F9F80;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child), .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #7F9F80;
+}
+.manual-btn:focus {
+    background: #7F9F80;
+}
+
+
+/* JSDasar */
+.pendahuluan {
+    min-height: 75vh;
+    padding: 0px 50px;
+}
+ol li{
+    margin: 0px 50px;
+    text-align: justify;
+}
+.bab {
+    width: 750px;
+    margin: 20px auto;
+}
+.bab ul {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    text-decoration: none;
+    margin: 15px 0px;
+    text-align: center;
+}
+.bab ul li a{
+    color: #151515;
+    text-decoration: none;
+    padding: 15px 5px;
+}
+.bab ul li a:hover {
+    background-color: #151515;
+    color: white;
+}
+.materi {
+    min-height: 100vh;
+    padding: 15px 50px;
+    margin: 5px 15px;
+    border: 1px dashed black;
+    background-color: #FFC374;
+}
+.materi h2 {
+    text-align: center;
+    margin: 20px 0px;
+    text-decoration: underline;
+}
+h3 {
+    text-align: center;
+}
+.sub-kolom {
+    padding: 15px;
+    background-color: #F9E897;
+    border: 1px dotted black;
+}
+.sub-kolom:hover {
+    transform: scale(1.1);
+    /* background-color: gray; */
+    background-color: #7F9F80;
+    /* color: white; */
+} 
+.sub-kolom ul {
+    margin: 0px 25px;
+}
+.code {
+    margin: 5px 0px;
+    padding: 5px;
+    font-size: 12px;
+    font-family:'Courier New', Courier, monospace;
+    background-color: #151515;
+    color: white;
+}
+.hasil {
+    color: blue;
+}
+.hasil-operator {
+    text-align: center;
+    color: blue;
+}
+.uji {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#angka1, #angka2 {
+    width: 245px;
+}
+.uji-boolean select {
+    width: 85px;
+}
+.btn-coba {
+    margin: 5px auto;
+    padding: 5px;
+}
+#angka-1, #angka-2, #angka-3, 
+#perbandingan-1, #perbandingan-2,
+#logika-1, #logika-2
+#bitwise-1, #bitwise-2 {
+    width: 265px;
+}
+.operator-hitung {
+    padding: 3px;
+}
+#operator p {
+    text-align: center;
+}
+table {
+    margin: 5px auto;
+    border: 1px solid black;
+    padding: 5px 25px;
+}
+
+.btn_pop_up {
+    text-align: center;
+}
+.pop_up {
+    padding: 10px;
+    background-color: white;
+}
+
+
+/* Form */
+form {
+    margin: 0px auto;
+    width: 550px;
+    padding: 0px 15px;
+    border: 2px solid #F9E897;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+} 
+form .sub-kolom {
+    background-color: white;
+}
+form .sub-kolom:hover {
+    background-color: white;
+    transform: scale(1);
+}
+input[type="number"], input[type="text"], input[type="email"], input[type="file"], select {
+    width: 225px;
+    padding: 3px 0px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0px 15px;
+}
+
+.kolom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin: 15px 0px;
+}
+.kolom-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 15px 0px;
+}
+
+.btn-daftar {
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+input[type="submit"] {
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    padding: 5px 0px;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+    transform: scale(1.2);
+}
+
+.notif {
+    width: 100%;
+    letter-spacing: 15px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width : 600px) {
+    form {
+        width: 45%;
+        margin-bottom: 35px;
+    }
+    .kolom, .kolom-2 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+    input[type="number"], input[type="text"], input[type="email"], input[type="file"], select {
+        width: 240px;
+        padding: 3px 0px;
+    }
+    textarea {
+        width: 240px;
+    }
+    .notif {
+        letter-spacing: 5px;
+    }
+}
+@media (max-width : 725px) {
+    .slide div img {
+        max-width: 425px;
+    }
+    .bab {
+        width: 100%;
+    }
+    .bab ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .bab ul li {
+        margin: 15px auto;
+    }
+    .uji {
+        grid-template-columns: repeat(1, 1fr);  
+    }
+    #angka1, #angka2 {
+        width: 67px;
+    }
+    #angka-3 {
+        width: 180px;
+    }
+    #angka-1, #angka-2,
+    #perbandingan-1, #perbandingan-2,
+    #logika-1, #logika-2,
+    #bitwise-1, #bitwise-2 {
+        width: 85px;
+    }
+}
+
+@media (max-width : 425px) {
+    .slide div img {
+        max-width: 85%;
+    }
+    .notif {
+        letter-spacing: 0px;
+    }
+}
+
+/* Footer */
+footer {
+    z-index: 1001;
+    text-align: end;
+    margin: 20px 0px;
+} 
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    padding: 25px;
+}
+footer a:hover {
+    border-radius: 50%;
+    color: white;
+    background: #151515;
+    transform: scale(1.2);
+}
